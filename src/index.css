@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #070a1a;
+  color: #f8f9fa;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(76, 201, 240, 0.28);
+  color: #fff;
+}
+
+.starfield {
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.95) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 28% 72%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 48% 32%, rgba(255, 255, 255, 0.85) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 73% 26%, rgba(255, 255, 255, 0.75) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 84% 64%, rgba(255, 255, 255, 0.85) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 92% 14%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 10% 84%, rgba(255, 255, 255, 0.75) 0 1px, transparent 1.5px);
+  background-size: 420px 420px;
+  animation: drift 60s linear infinite;
+}
+
+.hero-orbit {
+  animation: float 12s ease-in-out infinite;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(8px);
+  opacity: 0.75;
+}
+
+.glow-orb-one {
+  inset: 14% 18% 52% 52%;
+  background: radial-gradient(circle, rgba(76, 201, 240, 0.35), transparent 72%);
+}
+
+.glow-orb-two {
+  inset: 50% 8% 14% 56%;
+  background: radial-gradient(circle, rgba(155, 93, 229, 0.32), transparent 72%);
+}
+
+.star-pulse {
+  font-size: 1.1rem;
+  animation: pulseStar 3.6s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.7s;
+}
+
+.delay-2 {
+  animation-delay: 1.4s;
+}
+
+.delay-3 {
+  animation-delay: 2.1s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-120px, 80px, 0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.01);
+  }
+}
+
+@keyframes pulseStar {
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
