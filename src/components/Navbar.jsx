@@ -1,7 +1,6 @@
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Send Message', href: '#send-message' },
-  { label: 'Galaxy', href: '#galaxy' },
+  { label: 'Trang chủ', href: '#home' },
+  { label: 'Thiên hà', href: '#galaxy' },
   { label: 'Blog', href: '#blog' },
 ];
 
@@ -20,7 +19,7 @@ function MenuIcon() {
   );
 }
 
-export default function Navbar({ mobileMenuOpen, onToggleMenu, onNavigate }) {
+export default function Navbar({ mobileMenuOpen, onToggleMenu, onNavigate, onOpenMessagePopup }) {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[#070A1A]/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
@@ -43,13 +42,16 @@ export default function Navbar({ mobileMenuOpen, onToggleMenu, onNavigate }) {
               {item.label}
             </a>
           ))}
-          <a
+          <button
+            type="button"
             className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:border-cosmic-blue/60 hover:bg-cosmic-blue/15"
-            href="#send-message"
-            onClick={() => onNavigate?.()}
+            onClick={() => {
+              onNavigate?.();
+              onOpenMessagePopup?.();
+            }}
           >
-            Send a Star
-          </a>
+            Gửi thêm một vì sao
+          </button>
         </nav>
 
         <button
@@ -76,13 +78,16 @@ export default function Navbar({ mobileMenuOpen, onToggleMenu, onNavigate }) {
                 {item.label}
               </a>
             ))}
-            <a
+            <button
+              type="button"
               className="rounded-2xl bg-cosmic-blue px-4 py-3 text-sm font-medium text-[#06111F] transition hover:brightness-110"
-              href="#send-message"
-              onClick={() => onNavigate?.()}
+              onClick={() => {
+                onNavigate?.();
+                onOpenMessagePopup?.();
+              }}
             >
-              Send a Star
-            </a>
+              Gửi thêm một vì sao
+            </button>
           </nav>
         </div>
       ) : null}

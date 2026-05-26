@@ -31,7 +31,7 @@ export default function BlogModal({ blog, onClose }) {
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-cosmic-yellow/80">Blog story</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-cosmic-yellow/80">Câu chuyện blog</p>
             <h3 id="blog-modal-title" className="mt-2 text-2xl font-semibold text-white">
               {blog.title}
             </h3>
@@ -41,7 +41,7 @@ export default function BlogModal({ blog, onClose }) {
             onClick={onClose}
             className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 transition hover:bg-white/10 hover:text-white"
           >
-            Close
+            Đóng
           </button>
         </div>
 

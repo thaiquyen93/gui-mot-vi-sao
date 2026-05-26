@@ -10,9 +10,9 @@ export default function BlogSection() {
       <div className="mx-auto w-full max-w-7xl">
         <div className="max-w-2xl">
           <p className="text-sm uppercase tracking-[0.3em] text-cosmic-pink/80">Blog</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Stories that keep people going</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Những câu chuyện giữ ta đi tiếp</h2>
           <p className="mt-4 text-base leading-7 text-white/70">
-            Inspiration ambassadors share gentle stories for days that feel heavy, uncertain, or quiet.
+            Những mẩu chuyện nhỏ để nhắc ta rằng lòng tốt vẫn đang hiện diện ở rất nhiều nơi.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export default function BlogSection() {
                 onClick={() => setSelectedBlog(blog)}
                 className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:border-cosmic-blue/50 hover:bg-white/15"
               >
-                Read More
+                Đọc thêm
               </button>
             </article>
           ))}

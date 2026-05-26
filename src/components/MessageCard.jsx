@@ -36,7 +36,6 @@ export default function MessageCard({ message }) {
           <div className="flex items-start justify-between gap-3">
             <div>
               <h3 className="truncate text-sm font-semibold text-white">{message.display_name || 'Ẩn danh'}</h3>
-              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white/40">{message.topic}</p>
             </div>
             <time className="shrink-0 text-xs text-white/35" dateTime={message.created_at}>
               {message.formattedDate}
